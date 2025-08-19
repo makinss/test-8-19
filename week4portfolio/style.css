@@ -1,69 +1,202 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #d6e2ff, #f3e9f9); /* 柔らかなグラデーション背景 */
+    color: #333;
+    text-align: center;
 }
 
 header {
-  background-color: #3f51b5;
-  color: white;
-  padding: 20px;
+    background-image: linear-gradient(to right, #007bff, #6a00ff); /* 鮮やかなグラデーションヘッダー */
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
+    color: #e0f7fa; /* 明るい水色 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
 }
 
 section {
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #3f51b5; /* 濃い青色 */
+    margin-bottom: 20px;
 }
 
 .profile-image {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #3f51b5;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-bottom: 15px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff7b00; /* 鮮やかなオレンジ色のボーダー */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+    transition: transform 0.3s;
+}
+
+.profile-image:hover {
+    transform: scale(1.05); /* ホバーで少し拡大 */
+}
+
+.skill-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .skill-box button {
-  margin: 5px;
-  padding: 8px 15px;
-  border: none;
-  background-color: #3f51b5;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.skill-box button:nth-child(1) { background-color: #ff9100; } /* オレンジ */
+.skill-box button:nth-child(2) { background-color: #28a745; } /* 緑 */
+.skill-box button:nth-child(3) { background-color: #e83e8c; } /* ピンク */
+
 .skill-box button:hover {
-  background-color: #283593;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.portfolio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.portfolio-buttons a button {
+    background-color: #00bcd4; /* シアン */
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.portfolio-buttons a button:hover {
+    background-color: #0097a7;
+    transform: translateY(-3px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-image: linear-gradient(to right, #4CAF50, #8BC34A); /* 緑のグラデーション */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+#contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+#prefectures-list ul,
+#municipalities-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#prefectures-list li,
+#municipalities-list li {
+    background-color: #e3f2fd; /* 薄い青 */
+    border-left: 5px solid #007bff;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 footer {
-  background-color: #3f51b5;
-  color: white;
-  padding: 10px;
-  margin-top: 20px;
+    background-color: #2c3e50; /* 濃い青 */
+    color: white;
+    padding: 15px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
 }

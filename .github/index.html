@@ -1,59 +1,49 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>私のポートフォリオ</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私のポートフォリオ | 牧野左京</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <header>
-    <h1>私のポートフォリオ</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">ホーム</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  
-  <section id="home">
-    <h2>自己紹介</h2>
-    <img src="images/profile.jpg" alt="プロフィール写真" class="profile-image">
-    <p>こんにちは！私はWeb開発を学んでいるエンジニア志望です。</p>
-  </section>
+    <header>
+        <h1>私のポートフォリオ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="profile">
+        <h2>自己紹介</h2>
+        <img src="https://via.placeholder.com/180" alt="プロフィール写真" class="profile-image">
+        <p>こんにちは！私はWeb開発を学んでいるエンジニア志望です。</p>
+    </section>
 
-  <section id="skills">
-    <h2>スキル</h2>
-    <div class="skill-box">
-      <button>HTML・CSS</button>
-      <button>簡単なレイアウト作成</button>
-      <button>フォーム作成</button>
-    </div>
-  </section>
+    <section id="skills">
+        <h2>スキル</h2>
+        <div class="skill-box">
+            <button>HTML・CSSの基本</button>
+            <button>簡単なレイアウト作成</button>
+            <button>フォームの作成</button>
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <h2>ポートフォリオ</h2>
+        <div class="portfolio-buttons">
+            <a href="prefectures.html"><button>住んだことのある都道府県</button></a>
+            <a href="municipalities.html"><button>住んでいた市町村</button></a>
+        </div>
+    </section>
 
+    <footer>
+        <p>© 2025 私のポートフォリオ</p>
+    </footer>
 
-  <section id="contact">
-    <h2>お問い合わせ</h2>
-    <form>
-      <label for="name">名前:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
-
-      <label for="email">メールアドレス:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
-
-      <label for="message">メッセージ:</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-      <button type="submit">送信</button>
-    </form>
-  </section>
-
-  
-  <footer>
-    <p>© 2025 私のポートフォリオ</p>
-  </footer>
 </body>
 </html>
