@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub検索 | 牧野左京</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+       .search-form {
+            margin-bottom: 20px;
+        }
+       .search-form input,
+       .search-form button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+       .search-form button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        #user-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-align: left;
+        }
+        #user-info img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+       .user-profile {
+            display: flex;
+            align-items: center;
+        }
+       .user-details h3 {
+            margin: 0 0 5px 0;
+            color: #3f51b5;
+        }
+       .error-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GitHub検索</h1>
+        <nav>
+            <ul>
+                <li><a href="../../../index.html">ホーム</a></li>
+                <li><a href="../../../contact.html">お問い合わせ</a></li>
+                <li><a href="../../../assignments.html">課題</a></li>
+                <li><a href="/calculator./calculator.html">電卓</a></li>
+                <li><a href="github_search.html">GitHub検索</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>GitHubユーザー情報を取得しよう</h2>
+        <div class="search-form">
+            <input type="text" id="username" placeholder="GitHubユーザー名を入力" />
+            <button id="search-button">検索</button>
+        </div>
+        <div id="user-info"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 私のポートフォリオ</p>
+    </footer>
+
+    <script src="github_search.js"></script>
+</body>
+</html>
